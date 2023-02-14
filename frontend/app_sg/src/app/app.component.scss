@@ -1,0 +1,29 @@
+$background-toolbar: #333;
+$background-footer: #333;
+$color-toolbar: #fff;
+$color-footer: #fff;
+$color-page: #fff;
+
+a {
+  text-decoration: none;
+  color: $color-footer;
+}
+
+.toolbar {
+  background-color: $background-toolbar;
+  color: $color-toolbar;
+}
+
+.footer {
+  background-color: $background-footer;
+  text-align: center;
+  color: $color-footer;
+  width: 100%;
+  padding: 10px 0px;
+  position: absolute;
+  bottom: 0;
+
+  a:hover {
+    color: #888;
+  }
+}

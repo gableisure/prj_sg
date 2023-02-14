@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="content">
+
+    <div class="content__field-row">
+      <a href="http://www.gsoftware.com.br/" target="_blank">
+        <img [src]="pathImgLogoGS" alt="Logo Global System" width="115">
+      </a>
+
+      <mat-form-field class="content__form-field" appearance="fill" color="red">
+          <input
+              matInput
+              type="text"
+              placeholder="Pesquisar vagas"
+              (keyup)="searchData($event)"
+          >
+          <span matSuffix class="material-symbols-outlined">search</span>
+      </mat-form-field>
+    </div>
+
+    <section>
+      <mat-card *ngFor="let job of jobs" class="card-job">
+          <div class="header-card">
+            <mat-card-title>{{ job.title_job }}</mat-card-title>
+            <mat-card-subtitle *ngIf="1 == 1; else elseBlock" >{{ job.date_publication }}</mat-card-subtitle>
+            <ng-template #elseBlock><mat-card-subtitle class="publication_today">Publicada hoje</mat-card-subtitle></ng-template>
+          </div>
+        <mat-card-actions>
+          <button mat-button>
+            <a [href]="job.link_job" target="_blank">
+              Vizualizar vaga
+            </a>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </section>
+
+   </div>
+</div>

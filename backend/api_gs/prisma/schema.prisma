@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model tb_jobs {
+  id_job           Int      @id @default(autoincrement())
+  title_job        String   @db.VarChar(100)
+  date_publication String   @db.VarChar(100)
+  link_job         String   @db.VarChar(100)
+  update_at        DateTime @db.Timestamp(6)
+}

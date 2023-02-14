@@ -1,0 +1,58 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "API Global System",
+      "description": "Simple API of Global System",
+      "version": "1.0"
+    },
+    "host": "localhost:3333",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "JobsREST",
+        "description": "Interface REST para consumir dados da tabela tb_jobs"
+      }
+    ],
+    "paths": {
+      "/api/jobs": {
+        "get": {
+          "tags": [
+            "JobsREST"
+          ],
+          "operationId": "job",
+          "summary": "Retorna a lista de vagas da GLobal System",
+          "description": "description",
+          "responses": {
+            "200": {
+              "description": "JobResponse",
+              "examples": {
+                "application/json": [
+                  {
+                    "id_job": 41,
+                    "title_job": "Analista de Testes Funcionais",
+                    "date_publication": "02/02/2023",
+                    "link_job": "https://gsoftware.compleo.com.br/Visualizar/144356",
+                    "update_at": "2023-02-10T17:10:11.613Z"
+                  },
+                  {
+                    "id_job": 35,
+                    "title_job": "Líder Integração SAP",
+                    "date_publication": "08/02/2023",
+                    "link_job": "https://gsoftware.compleo.com.br/Visualizar/144819",
+                    "update_at": "2023-02-10T17:10:11.613Z"
+                  },
+                  {
+                    "id_job": 36,
+                    "title_job": "Consultor SAP TM",
+                    "date_publication": "08/02/2023",
+                    "link_job": "https://gsoftware.compleo.com.br/Visualizar/144863",
+                    "update_at": "2023-02-10T17:10:11.613Z"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+}
